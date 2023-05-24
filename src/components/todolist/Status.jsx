@@ -9,11 +9,11 @@ const Status = () => {
   useEffect(() => {
     let num = todos.reduce((acc, curr) => acc + (curr.isDone ? 1 : 0), 0);
     setFinished(num);
-  }, [state]);
+  }, [todos]);
 
   return (
     <div className="statusContainer">
-      <span>Total Tasks: {state.length}</span>
+      <span>Total Tasks: {todos.length}</span>
       <span>Completed: {finished}</span>
     </div>
   );

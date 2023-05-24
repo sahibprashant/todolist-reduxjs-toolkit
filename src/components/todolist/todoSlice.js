@@ -22,7 +22,9 @@ const todoSlice = createSlice({
     },
     removeTodo: (state, action) => {
       let { id } = action.payload;
-      state = state.filter((t) => t.id !== id);
+      let index = state.findIndex((t) => t.id === id);
+      state.splice(index, 1);
+      // return state.filter((t) => t.id !== id);
     },
     changeTodoStatus: (state, action) => {
       let { id, check } = action.payload;

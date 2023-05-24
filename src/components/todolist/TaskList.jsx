@@ -17,7 +17,11 @@ const TaskList = () => {
   }
 
   function handleRemove(item) {
-    dispatch(removeTodo(item.id));
+    dispatch(
+      removeTodo({
+        id: item.id,
+      })
+    );
   }
 
   return (

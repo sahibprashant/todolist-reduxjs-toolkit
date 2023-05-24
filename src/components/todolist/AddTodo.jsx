@@ -10,7 +10,7 @@ const AddTodo = () => {
     setInput(e.target.value);
   }
 
-  function addTodo() {
+  function handleAddTodo() {
     dispatch(addTodo(input));
     setInput('');
   }
@@ -21,7 +21,7 @@ const AddTodo = () => {
         className="addTodoForm"
         onSubmit={(e) => {
           e.preventDefault();
-          addTodo();
+          handleAddTodo();
         }}
       >
         <input
